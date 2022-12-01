@@ -1,18 +1,26 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/bg-desktop-light.jpg">
+    <PageTitle :title="getPageTitle" />
     <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
 
 <script>
+import {mapGetters} from 'vuex'
 import HelloWorld from './components/HelloWorld.vue'
+import PageTitle from './components/Page/PageTitle.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    HelloWorld,
+    PageTitle
+  },
+  computed: {
+    ...mapGetters(['getPageTitle'])
   }
+
 }
 </script>
 

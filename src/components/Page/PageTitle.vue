@@ -9,7 +9,7 @@
         name: 'PageTitle',
         props: {
             title: String,
-            required: true
+            
         }
     }
 </script>
